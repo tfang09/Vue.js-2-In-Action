@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js App</title>
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <tr v-for="person in people">
+            <td>{{ person.name }}</td>
+            <td>{{ person.email }}</td>
+            <td>{{ person.balance }}</td>
+            <td>{{ person.registered }}</td>
+            <td>
+                <span class="positive" v-if="person.isActive">Active</span>
+                <span class="negative" v-else>Inactive</span>
+            </td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript">
+        const app = new Vue({
+            el: '#app',
+
+            data: {
+                people: [
+                    {
+                    "index": 0,
+                    "guid": "38d22bc9-8625-442f-b9d2-21f91764d1ed",
+                    "isActive": true,
+                    "balance": 1890.31,
+                    "name": "Marina Noel",
+                    "email": "marinanoel@jumpstack.com",
+                    "registered": "2021-11-25T12:03:18"
+                    },
+                    {
+                    "index": 1,
+                    "guid": "3716aaa7-c777-439f-a065-34642ac65bf8",
+                    "isActive": true,
+                    "balance": 2359.64,
+                    "name": "Kirkland Odom",
+                    "email": "kirklandodom@jumpstack.com",
+                    "registered": "2021-01-22T08:34:43"
+                    },
+                    {
+                    "index": 2,
+                    "guid": "0abf7640-7533-40eb-b078-05a2c35879f5",
+                    "isActive": true,
+                    "balance": 3865.71,
+                    "name": "Burton Holmes",
+                    "email": "burtonholmes@jumpstack.com",
+                    "registered": "2014-05-27T07:13:41"
+                    },
+                    {
+                    "index": 3,
+                    "guid": "67571c4c-1a45-4a92-ba85-1fa2b4df98b9",
+                    "isActive": true,
+                    "balance": 2854.38,
+                    "name": "Meyer Manning",
+                    "email": "meyermanning@jumpstack.com",
+                    "registered": "2018-11-09T03:14:58"
+                    },
+                    {
+                    "index": 4,
+                    "guid": "7c946c43-42e8-44d0-b64e-b055f4d96235",
+                    "isActive": true,
+                    "balance": 1243.74,
+                    "name": "Mccray Jenkins",
+                    "email": "mccrayjenkins@jumpstack.com",
+                    "registered": "2014-10-02T06:38:09"
+                    }
+                ]
+            },
+        });
+    </script>
+</body>
+</html>
